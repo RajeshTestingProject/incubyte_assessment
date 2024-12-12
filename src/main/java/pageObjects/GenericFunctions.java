@@ -11,11 +11,11 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.time.Duration;
 
 public class GenericFunctions {
-
-    public GenericFunctions(){
-
-    }
     WebDriver driver;
+    public GenericFunctions(WebDriver driver){
+        this.driver=driver;
+    }
+
     public static boolean isElementPresent(WebDriver driver, By locator, int timeoutInSeconds) {
         try {
             WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(timeoutInSeconds));
